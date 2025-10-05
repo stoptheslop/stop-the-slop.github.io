@@ -1,0 +1,7 @@
+# _config.yml
+plugins:
+  - jekyll-paginate
+
+# Pagination settings
+paginate: 10 # Number of signatures per page
+paginate_path: "/page:num/"

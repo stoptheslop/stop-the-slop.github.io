@@ -1,0 +1,10 @@
+# _data/signatures.yml
+- name: "Jonas Cronholm-Lundin"
+  affiliation: "Founder, stoptheslop.se. Dayjob as Head of Platform at Getswish AB"
+  github_username: "JonasLundin"
+  date: "2025-10-05"
+
+- name: "Ada Lovelace"
+  affiliation: "Mathematician & Writer"
+  github_username: "ada-lovelace"
+  date: "2025-10-03"
