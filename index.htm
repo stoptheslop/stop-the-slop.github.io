@@ -39,21 +39,6 @@ layout: null
       </section>
 
       <section class="signatures">
-        <h2>Signatories ({{ site.data.signatures | size }})</h2>
-        <div class="signature-list">
-          {% for signature in site.data.signatures reversed %}
-          <div class="signature">
-            <p class="name">{{ signature.name }}</p>
-            <p class="affiliation">{{ signature.affiliation }}</p>
-            <a href="https://github.com/{{ signature.github_username }}" target="_blank" rel="noopener"
-              >@{{ signature.github_username }}</a
-            >
-          </div>
-          {% endfor %}
-        </div>
-      </section>
-
-      <section class="signatures">
         <h2>Signatories ({{ paginator.total_items }})</h2>
         <div class="signature-list">
           {% for signature in paginator.docs %}
