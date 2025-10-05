@@ -6,7 +6,7 @@ plugins:
 pagination:
   enabled: true # Turn on pagination
   data: "signatures" # Paginate the _data/signatures.yml file
-  per_page: 20 # How many signatures to show per page
+  per_page: 10 # How many signatures to show per page
   path: "/page:num/" # The URL for subsequent pages
   sort_field: "date" # Sort signatures by their date field
   sort_reverse: true # Show the newest signatures first
