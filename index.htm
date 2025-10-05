@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,19 +37,18 @@
         >
       </section>
 
-      <section class="signatures">
-        <h2>Signatories ({% raw %}{{ site.data.signatures | size }}{% endraw %})</h2>
-        <div class="signature-list">
-          {% raw %}{% for signature in paginator.posts %}{% endraw %}
-          <div class="signature">
-            <p class="name">{% raw %}{{ signature.name }}{% endraw %}</p>
-            <p class="affiliation">{% raw %}{{ signature.affiliation }}{% endraw %}</p>
-            <a href="https://github.com/{% raw %}{{ signature.github_username }}{% endraw %}" target="_blank"
-              >@{% raw %}{{ signature.github_username }}{% endraw %}</a
-            >
-          </div>
-          {% raw %}{% endfor %}{% endraw %}
-        </div>
+        <section class="signatures">
+            <h2>Signatories ({{ site.data.signatures | size }})</h2>
+            <div class="signature-list">
+                {% for signature in site.data.signatures reversed %}
+                <div class="signature">
+                    <p class="name">{{ signature.name }}</p>
+                    <p class="affiliation">{{ signature.affiliation }}</p>
+                    <a href="https://github.com/{{ signature.github_username }}" target="_blank" rel="noopener">@{{ signature.github_username }}</a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
 
         <div class="pagination">
           {% raw %}{% if paginator.previous_page %}{% endraw %}
