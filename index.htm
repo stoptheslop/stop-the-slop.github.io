@@ -52,23 +52,7 @@ layout: null
           {% endfor %}
         </div>
 
-        <div class="pagination" style="text-align: center; margin-top: 30px">
-          {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-          {% else %}
-          <span class="previous" style="color: #ccc">Previous</span>
-          {% endif %}
-
-          <span class="page_number" style="margin: 0 15px">
-            Page: {{ paginator.page }} of {{ paginator.total_pages }}
-          </span>
-
-          {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-          {% else %}
-          <span class="next" style="color: #ccc">Next</span>
-          {% endif %}
-        </div>
+        <div class="pagination" style="text-align: center; margin-top: 30px"></div>
       </section>
     </main>
 
