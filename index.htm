@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop The Slop</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="/assets/images/logo.png" alt="Stop The Slop Logo" width="150" />
+      <h1>Stop The Slop</h1>
+      <p>A manifesto for genuine design and engineering.</p>
+    </header>
+
+    <main>
+      <article class="manifesto">
+        <h2>The Manifesto</h2>
+        <p>We believe in craftsmanship over quantity.</p>
+        <p>We believe in building durable, thoughtful solutions, not disposable digital landfill.</p>
+        <p>
+          AI is a powerful tool, but it should augment human ingenuity, not replace it with low-value, derivative
+          "slop".
+        </p>
+      </article>
+
+      <section class="call-to-action">
+        <h3>Stand for Quality.</h3>
+        <a
+          href="https://github.com/stoptheslop/stop-the-slop.github.io/new/master/_signatures_pending?filename=signature.yml&value=-+name%3A+%22Your+Display+Name%22%0A++affiliation%3A+%22Your+Title+%2F+Company%22%0A++github_username%3A+%22%22%0A"
+          class="sign-button"
+          target="_blank"
+          >Sign the Manifesto</a
+        >
+      </section>
+
+      <section class="signatures">
+        <h2>Signatories ({% raw %}{{ site.data.signatures | size }}{% endraw %})</h2>
+        <div class="signature-list">
+          {% raw %}{% for signature in paginator.posts %}{% endraw %}
+          <div class="signature">
+            <p class="name">{% raw %}{{ signature.name }}{% endraw %}</p>
+            <p class="affiliation">{% raw %}{{ signature.affiliation }}{% endraw %}</p>
+            <a href="https://github.com/{% raw %}{{ signature.github_username }}{% endraw %}" target="_blank"
+              >@{% raw %}{{ signature.github_username }}{% endraw %}</a
+            >
+          </div>
+          {% raw %}{% endfor %}{% endraw %}
+        </div>
+
+        <div class="pagination">
+          {% raw %}{% if paginator.previous_page %}{% endraw %}
+          <a href="{% raw %}{{ paginator.previous_page_path }}{% endraw %}" class="previous">Previous</a>
+          {% raw %}{% endif %}{% endraw %}
+          <span class="page_number"
+            >Page: {% raw %}{{ paginator.page }}{% endraw %} of {% raw %}{{ paginator.total_pages }}{% endraw %}</span
+          >
+          {% raw %}{% if paginator.next_page %}{% endraw %}
+          <a href="{% raw %}{{ paginator.next_page_path }}{% endraw %}" class="next">Next</a>
+          {% raw %}{% endif %}{% endraw %}
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>This is a community-driven effort hosted on GitHub.</p>
+    </footer>
+  </body>
+</html>
