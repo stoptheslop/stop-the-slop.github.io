@@ -1,6 +1,7 @@
 ---
 layout: null
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,29 +38,51 @@ layout: null
         >
       </section>
 
-        <section class="signatures">
-            <h2>Signatories ({{ site.data.signatures | size }})</h2>
-            <div class="signature-list">
-                {% for signature in site.data.signatures reversed %}
-                <div class="signature">
-                    <p class="name">{{ signature.name }}</p>
-                    <p class="affiliation">{{ signature.affiliation }}</p>
-                    <a href="https://github.com/{{ signature.github_username }}" target="_blank" rel="noopener">@{{ signature.github_username }}</a>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
+      <section class="signatures">
+        <h2>Signatories ({{ site.data.signatures | size }})</h2>
+        <div class="signature-list">
+          {% for signature in site.data.signatures reversed %}
+          <div class="signature">
+            <p class="name">{{ signature.name }}</p>
+            <p class="affiliation">{{ signature.affiliation }}</p>
+            <a href="https://github.com/{{ signature.github_username }}" target="_blank" rel="noopener"
+              >@{{ signature.github_username }}</a
+            >
+          </div>
+          {% endfor %}
+        </div>
+      </section>
 
-        <div class="pagination">
-          {% raw %}{% if paginator.previous_page %}{% endraw %}
-          <a href="{% raw %}{{ paginator.previous_page_path }}{% endraw %}" class="previous">Previous</a>
-          {% raw %}{% endif %}{% endraw %}
-          <span class="page_number"
-            >Page: {% raw %}{{ paginator.page }}{% endraw %} of {% raw %}{{ paginator.total_pages }}{% endraw %}</span
-          >
-          {% raw %}{% if paginator.next_page %}{% endraw %}
-          <a href="{% raw %}{{ paginator.next_page_path }}{% endraw %}" class="next">Next</a>
-          {% raw %}{% endif %}{% endraw %}
+      <section class="signatures">
+        <h2>Signatories ({{ paginator.total_items }})</h2>
+        <div class="signature-list">
+          {% for signature in paginator.docs %}
+          <div class="signature">
+            <p class="name">{{ signature.name }}</p>
+            <p class="affiliation">{{ signature.affiliation }}</p>
+            <a href="https://github.com/{{ signature.github_username }}" target="_blank" rel="noopener"
+              >@{{ signature.github_username }}</a
+            >
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="pagination" style="text-align: center; margin-top: 30px">
+          {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+          {% else %}
+          <span class="previous" style="color: #ccc">Previous</span>
+          {% endif %}
+
+          <span class="page_number" style="margin: 0 15px">
+            Page: {{ paginator.page }} of {{ paginator.total_pages }}
+          </span>
+
+          {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+          {% else %}
+          <span class="next" style="color: #ccc">Next</span>
+          {% endif %}
         </div>
       </section>
     </main>
