@@ -1,7 +1,12 @@
 # _config.yml
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
 
-# Pagination settings
-paginate: 10 # Number of signatures per page
-paginate_path: "/page:num/"
+# --- Pagination Settings ---
+pagination:
+  enabled: true # Turn on pagination
+  data: "signatures" # Paginate the _data/signatures.yml file
+  per_page: 20 # How many signatures to show per page
+  path: "/page:num/" # The URL for subsequent pages
+  sort_field: "date" # Sort signatures by their date field
+  sort_reverse: true # Show the newest signatures first
