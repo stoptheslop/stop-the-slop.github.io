@@ -47,6 +47,7 @@ pagination:
 
       <section class="signatures">
         <h2>Signatories ({{ paginator.total_items }})</h2>
+        <!-- Debug: Data Size = {{ site.data.signatures.size }} -->
         <div class="signature-list">
           {% for signature in paginator.docs %}
           <div class="signature">
