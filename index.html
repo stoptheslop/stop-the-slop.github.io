@@ -26,12 +26,14 @@ pagination:
 
     <main>
       <section class="backdrop">
-        <h2>{{ site.data.content.backdrop.title }}</h2>
-        <div class="content">{{ site.data.content.backdrop.body | markdownify }}</div>
+        <h2>{{ site.data.content.backdrop.title | default: "The Backdrop" }}</h2>
+        <div class="content">
+          {{ site.data.content.backdrop.body | default: "Content coming soon..." | markdownify }}
+        </div>
       </section>
 
       <article class="manifesto">
-        <h2>{{ site.data.content.manifesto.title }}</h2>
+        <h2>{{ site.data.content.manifesto.title | default: "The Manifesto" }}</h2>
         {% for item in site.data.content.manifesto.items %}
         <p>{{ item }}</p>
         {% endfor %}
@@ -48,11 +50,18 @@ pagination:
       </section>
 
       <section class="signatures">
-        <h2>Signatories ({{ paginator.total_items | default: site.signatures.size | default: 0 }})</h2>
-        <!-- Debug: Paginator Total = {{ paginator.total_items }} -->
-        <!-- Debug: Collection Size = {{ site.signatures.size }} -->
+        {% assign items_count = paginator.total_items | default: site.signatures.size | default: 0 %}
+        <h2>Signatories ({{ items_count }})</h2>
+
+        <!-- Debug Info -->
+        <!-- Paginator exists: {{ paginator | yesno: "YES", "NO" }} -->
+        <!-- Paginator Total items: {{ paginator.total_items }} -->
+        <!-- Paginator Documents size: {{ paginator.documents.size }} -->
+        <!-- Collection size: {{ site.signatures.size }} -->
+
         <div class="signature-list">
-          {% for signature in paginator.docs %}
+          {% assign docs = paginator.documents | default: paginator.posts %} {% if docs.size > 0 %} {% for signature in
+          docs %}
           <div class="signature">
             <p class="name">{{ signature.name }}</p>
             <p class="affiliation">{{ signature.affiliation }}</p>
@@ -63,7 +72,9 @@ pagination:
               >@{{ signature.github_username | replace: "@", "" }}</a
             >
           </div>
-          {% endfor %} {% if paginator.docs.size == 0 %} {% for signature in site.signatures limit:10 %}
+          {% endfor %} {% else %}
+          <!-- Fallback: showing first 10 legacy style or if paginator failed -->
+          {% for signature in site.signatures limit:10 %}
           <div class="signature">
             <p class="name">{{ signature.name }}</p>
             <p class="affiliation">{{ signature.affiliation }}</p>
@@ -79,11 +90,11 @@ pagination:
 
         <div class="pagination" style="text-align: center; margin-top: 30px">
           {% if paginator.total_pages > 1 %} {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path }}" class="pagination-link">&laquo; Prev</a>
+          <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link">&laquo; Prev</a>
           {% endif %}
           <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
           {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path }}" class="pagination-link">Next &raquo;</a>
+          <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link">Next &raquo;</a>
           {% endif %} {% endif %}
         </div>
       </section>
