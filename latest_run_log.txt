@@ -1,0 +1,383 @@
+build_and_deploy	Set up job	﻿2026-01-06T15:49:42.8188883Z Current runner version: '2.330.0'
+build_and_deploy	Set up job	2026-01-06T15:49:42.8212417Z ##[group]Runner Image Provisioner
+build_and_deploy	Set up job	2026-01-06T15:49:42.8213232Z Hosted Compute Agent
+build_and_deploy	Set up job	2026-01-06T15:49:42.8213796Z Version: 20251211.462
+build_and_deploy	Set up job	2026-01-06T15:49:42.8214318Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
+build_and_deploy	Set up job	2026-01-06T15:49:42.8215269Z Build Date: 2025-12-11T16:28:49Z
+build_and_deploy	Set up job	2026-01-06T15:49:42.8215874Z Worker ID: {79e3cbf0-1f1d-465f-be28-ba27498c803c}
+build_and_deploy	Set up job	2026-01-06T15:49:42.8216524Z ##[endgroup]
+build_and_deploy	Set up job	2026-01-06T15:49:42.8216970Z ##[group]Operating System
+build_and_deploy	Set up job	2026-01-06T15:49:42.8217505Z Ubuntu
+build_and_deploy	Set up job	2026-01-06T15:49:42.8217917Z 24.04.3
+build_and_deploy	Set up job	2026-01-06T15:49:42.8218338Z LTS
+build_and_deploy	Set up job	2026-01-06T15:49:42.8218708Z ##[endgroup]
+build_and_deploy	Set up job	2026-01-06T15:49:42.8219217Z ##[group]Runner Image
+build_and_deploy	Set up job	2026-01-06T15:49:42.8219703Z Image: ubuntu-24.04
+build_and_deploy	Set up job	2026-01-06T15:49:42.8220108Z Version: 20251215.174.1
+build_and_deploy	Set up job	2026-01-06T15:49:42.8221057Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251215.174/images/ubuntu/Ubuntu2404-Readme.md
+build_and_deploy	Set up job	2026-01-06T15:49:42.8222223Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251215.174
+build_and_deploy	Set up job	2026-01-06T15:49:42.8223316Z ##[endgroup]
+build_and_deploy	Set up job	2026-01-06T15:49:42.8224187Z ##[group]GITHUB_TOKEN Permissions
+build_and_deploy	Set up job	2026-01-06T15:49:42.8226213Z Contents: write
+build_and_deploy	Set up job	2026-01-06T15:49:42.8226706Z Metadata: read
+build_and_deploy	Set up job	2026-01-06T15:49:42.8227119Z ##[endgroup]
+build_and_deploy	Set up job	2026-01-06T15:49:42.8229168Z Secret source: Actions
+build_and_deploy	Set up job	2026-01-06T15:49:42.8229752Z Prepare workflow directory
+build_and_deploy	Set up job	2026-01-06T15:49:42.8527338Z Prepare all required actions
+build_and_deploy	Set up job	2026-01-06T15:49:42.8578728Z Getting action download info
+build_and_deploy	Set up job	2026-01-06T15:49:43.3423784Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+build_and_deploy	Set up job	2026-01-06T15:49:43.4335992Z Download action repository 'ruby/setup-ruby@v1' (SHA:b90be12699fdfcbee4440c2bba85f6f460446bb0)
+build_and_deploy	Set up job	2026-01-06T15:49:44.2417002Z Download action repository 'peaceiris/actions-gh-pages@v3' (SHA:373f7f263a76c20808c831209c920827a82a2847)
+build_and_deploy	Set up job	2026-01-06T15:49:45.1437411Z Complete job name: build_and_deploy
+build_and_deploy	Checkout	﻿2026-01-06T15:49:45.2163774Z ##[group]Run actions/checkout@v4
+build_and_deploy	Checkout	2026-01-06T15:49:45.2165578Z with:
+build_and_deploy	Checkout	2026-01-06T15:49:45.2166535Z   repository: stoptheslop/stoptheslop.github.io
+build_and_deploy	Checkout	2026-01-06T15:49:45.2167900Z   token: ***
+build_and_deploy	Checkout	2026-01-06T15:49:45.2168613Z   ssh-strict: true
+build_and_deploy	Checkout	2026-01-06T15:49:45.2169349Z   ssh-user: git
+build_and_deploy	Checkout	2026-01-06T15:49:45.2170134Z   persist-credentials: true
+build_and_deploy	Checkout	2026-01-06T15:49:45.2170928Z   clean: true
+build_and_deploy	Checkout	2026-01-06T15:49:45.2171696Z   sparse-checkout-cone-mode: true
+build_and_deploy	Checkout	2026-01-06T15:49:45.2172619Z   fetch-depth: 1
+build_and_deploy	Checkout	2026-01-06T15:49:45.2173304Z   fetch-tags: false
+build_and_deploy	Checkout	2026-01-06T15:49:45.2174108Z   show-progress: true
+build_and_deploy	Checkout	2026-01-06T15:49:45.2174940Z   lfs: false
+build_and_deploy	Checkout	2026-01-06T15:49:45.2175635Z   submodules: false
+build_and_deploy	Checkout	2026-01-06T15:49:45.2176355Z   set-safe-directory: true
+build_and_deploy	Checkout	2026-01-06T15:49:45.2177524Z ##[endgroup]
+build_and_deploy	Checkout	2026-01-06T15:49:45.3201507Z Syncing repository: stoptheslop/stoptheslop.github.io
+build_and_deploy	Checkout	2026-01-06T15:49:45.3204359Z ##[group]Getting Git version info
+build_and_deploy	Checkout	2026-01-06T15:49:45.3206401Z Working directory is '/home/runner/work/stoptheslop.github.io/stoptheslop.github.io'
+build_and_deploy	Checkout	2026-01-06T15:49:45.3209939Z [command]/usr/bin/git version
+build_and_deploy	Checkout	2026-01-06T15:49:45.3265490Z git version 2.52.0
+build_and_deploy	Checkout	2026-01-06T15:49:45.3288672Z ##[endgroup]
+build_and_deploy	Checkout	2026-01-06T15:49:45.3301676Z Temporarily overriding HOME='/home/runner/work/_temp/fe385723-7671-42dc-9854-368f8272beef' before making global git config changes
+build_and_deploy	Checkout	2026-01-06T15:49:45.3304099Z Adding repository directory to the temporary git global config as a safe directory
+build_and_deploy	Checkout	2026-01-06T15:49:45.3316262Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/stoptheslop.github.io/stoptheslop.github.io
+build_and_deploy	Checkout	2026-01-06T15:49:45.3350368Z Deleting the contents of '/home/runner/work/stoptheslop.github.io/stoptheslop.github.io'
+build_and_deploy	Checkout	2026-01-06T15:49:45.3352868Z ##[group]Initializing the repository
+build_and_deploy	Checkout	2026-01-06T15:49:45.3357213Z [command]/usr/bin/git init /home/runner/work/stoptheslop.github.io/stoptheslop.github.io
+build_and_deploy	Checkout	2026-01-06T15:49:45.3456976Z hint: Using 'master' as the name for the initial branch. This default branch name
+build_and_deploy	Checkout	2026-01-06T15:49:45.3557614Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build_and_deploy	Checkout	2026-01-06T15:49:45.3560290Z hint: to use in all of your new repositories, which will suppress this warning,
+build_and_deploy	Checkout	2026-01-06T15:49:45.3561809Z hint: call:
+build_and_deploy	Checkout	2026-01-06T15:49:45.3562746Z hint:
+build_and_deploy	Checkout	2026-01-06T15:49:45.3563548Z hint: 	git config --global init.defaultBranch <name>
+build_and_deploy	Checkout	2026-01-06T15:49:45.3564536Z hint:
+build_and_deploy	Checkout	2026-01-06T15:49:45.3565585Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build_and_deploy	Checkout	2026-01-06T15:49:45.3567124Z hint: 'development'. The just-created branch can be renamed via this command:
+build_and_deploy	Checkout	2026-01-06T15:49:45.3568316Z hint:
+build_and_deploy	Checkout	2026-01-06T15:49:45.3568930Z hint: 	git branch -m <name>
+build_and_deploy	Checkout	2026-01-06T15:49:45.3569647Z hint:
+build_and_deploy	Checkout	2026-01-06T15:49:45.3570645Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build_and_deploy	Checkout	2026-01-06T15:49:45.3572634Z Initialized empty Git repository in /home/runner/work/stoptheslop.github.io/stoptheslop.github.io/.git/
+build_and_deploy	Checkout	2026-01-06T15:49:45.3576034Z [command]/usr/bin/git remote add origin https://github.com/stoptheslop/stoptheslop.github.io
+build_and_deploy	Checkout	2026-01-06T15:49:45.3578777Z ##[endgroup]
+build_and_deploy	Checkout	2026-01-06T15:49:45.3579916Z ##[group]Disabling automatic garbage collection
+build_and_deploy	Checkout	2026-01-06T15:49:45.3580946Z [command]/usr/bin/git config --local gc.auto 0
+build_and_deploy	Checkout	2026-01-06T15:49:45.3583199Z ##[endgroup]
+build_and_deploy	Checkout	2026-01-06T15:49:45.3584232Z ##[group]Setting up auth
+build_and_deploy	Checkout	2026-01-06T15:49:45.3585933Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build_and_deploy	Checkout	2026-01-06T15:49:45.3589455Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build_and_deploy	Checkout	2026-01-06T15:49:45.3865506Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build_and_deploy	Checkout	2026-01-06T15:49:45.3891114Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build_and_deploy	Checkout	2026-01-06T15:49:45.4057351Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build_and_deploy	Checkout	2026-01-06T15:49:45.4083796Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build_and_deploy	Checkout	2026-01-06T15:49:45.4266322Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build_and_deploy	Checkout	2026-01-06T15:49:45.4295819Z ##[endgroup]
+build_and_deploy	Checkout	2026-01-06T15:49:45.4297500Z ##[group]Fetching the repository
+build_and_deploy	Checkout	2026-01-06T15:49:45.4304741Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +956d24cd912ab6b02fb838f9d8ce88521ce23540:refs/remotes/origin/master
+build_and_deploy	Checkout	2026-01-06T15:49:46.0006385Z From https://github.com/stoptheslop/stoptheslop.github.io
+build_and_deploy	Checkout	2026-01-06T15:49:46.0035031Z  * [new ref]         956d24cd912ab6b02fb838f9d8ce88521ce23540 -> origin/master
+build_and_deploy	Checkout	2026-01-06T15:49:46.0036605Z ##[endgroup]
+build_and_deploy	Checkout	2026-01-06T15:49:46.0037008Z ##[group]Determining the checkout info
+build_and_deploy	Checkout	2026-01-06T15:49:46.0037509Z ##[endgroup]
+build_and_deploy	Checkout	2026-01-06T15:49:46.0040195Z [command]/usr/bin/git sparse-checkout disable
+build_and_deploy	Checkout	2026-01-06T15:49:46.0078870Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build_and_deploy	Checkout	2026-01-06T15:49:46.0100681Z ##[group]Checking out the ref
+build_and_deploy	Checkout	2026-01-06T15:49:46.0105528Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+build_and_deploy	Checkout	2026-01-06T15:49:46.0153776Z Reset branch 'master'
+build_and_deploy	Checkout	2026-01-06T15:49:46.0154766Z branch 'master' set up to track 'origin/master'.
+build_and_deploy	Checkout	2026-01-06T15:49:46.0160317Z ##[endgroup]
+build_and_deploy	Checkout	2026-01-06T15:49:46.0189607Z [command]/usr/bin/git log -1 --format=%H
+build_and_deploy	Checkout	2026-01-06T15:49:46.0207385Z 956d24cd912ab6b02fb838f9d8ce88521ce23540
+build_and_deploy	Setup Ruby and Jekyll	﻿2026-01-06T15:49:46.0373375Z ##[group]Run ruby/setup-ruby@v1
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.0373694Z with:
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.0373906Z   ruby-version: 3.1
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.0374133Z   bundler-cache: true
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.0374363Z ##[endgroup]
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.1892158Z ##[group]Modifying PATH
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.1897325Z Entries added to PATH to use selected Ruby:
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.1900304Z   /opt/hostedtoolcache/Ruby/3.1.7/x64/bin
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.1910628Z ##[endgroup]
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.1929183Z ##[group]Downloading Ruby
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.1930169Z https://github.com/ruby/ruby-builder/releases/download/ruby-3.1.7/ruby-3.1.7-ubuntu-24.04-x64.tar.gz
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.6907362Z Took   0.50 seconds
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.6908299Z ##[endgroup]
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.6909060Z ##[group]Extracting  Ruby
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:46.6937036Z [command]/usr/bin/tar -xz -C /opt/hostedtoolcache/Ruby/3.1.7 -f /home/runner/work/_temp/e9e8a42d-af52-44ea-95eb-ed44224cbf88
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0744104Z Took   0.38 seconds
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0745859Z ##[endgroup]
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0746533Z ##[group]Print Ruby version
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0760815Z [command]/opt/hostedtoolcache/Ruby/3.1.7/x64/bin/ruby --version
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0891433Z ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0903161Z Took   0.02 seconds
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0904138Z ##[endgroup]
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0916223Z ##[group]Installing Bundler
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0916643Z Using Bundler shipped with ruby-3.1.7
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0917057Z Took   0.00 seconds
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0917581Z ##[endgroup]
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0917862Z > bundle install
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0918457Z Setting BUNDLER_VERSION=2 for "bundle config|lock" commands below to ensure Bundler 2 is used
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.0940517Z [command]/opt/hostedtoolcache/Ruby/3.1.7/x64/bin/bundle config set --local path /home/runner/work/stoptheslop.github.io/stoptheslop.github.io/vendor/bundle
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:47.2124818Z [command]/opt/hostedtoolcache/Ruby/3.1.7/x64/bin/bundle lock
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.2421647Z Fetching gem metadata from https://rubygems.org/...........
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3300696Z Resolving dependencies...
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3613617Z Writing lockfile to /home/runner/work/stoptheslop.github.io/stoptheslop.github.io/Gemfile.lock
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3789472Z ##[group]Print lockfile
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3801453Z [command]/usr/bin/cat Gemfile.lock
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3826242Z GEM
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3826739Z   remote: https://rubygems.org/
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3827110Z   specs:
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3827360Z     addressable (2.8.8)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3827708Z       public_suffix (>= 2.0.2, < 8.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3828091Z     base64 (0.3.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3828414Z     bigdecimal (4.0.1)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3828720Z     colorator (1.1.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3829024Z     concurrent-ruby (1.3.6)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3829378Z     csv (3.3.5)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3829750Z     em-websocket (0.5.3)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3830065Z       eventmachine (>= 0.12.9)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3830400Z       http_parser.rb (~> 0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3830734Z     eventmachine (1.2.7)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3831040Z     ffi (1.17.3-x86_64-linux-gnu)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3831376Z     forwardable-extended (2.6.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3831727Z     google-protobuf (4.33.2-x86_64-linux-gnu)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3832086Z       bigdecimal
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3832359Z       rake (>= 13)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3832655Z     http_parser.rb (0.8.1)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3832973Z     i18n (1.14.8)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3833276Z       concurrent-ruby (~> 1.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3833600Z     jekyll (4.4.1)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3833901Z       addressable (~> 2.4)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3834233Z       base64 (~> 0.2)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3834532Z       colorator (~> 1.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3835016Z       csv (~> 3.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3835294Z       em-websocket (~> 0.5)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3835606Z       i18n (~> 1.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3835914Z       jekyll-sass-converter (>= 2.0, < 4.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3836271Z       jekyll-watch (~> 2.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3836980Z       json (~> 2.6)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3837265Z       kramdown (~> 2.3, >= 2.3.1)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3837642Z       kramdown-parser-gfm (~> 1.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3838012Z       liquid (~> 4.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3838327Z       mercenary (~> 0.3, >= 0.3.6)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3838822Z       pathutil (~> 0.9)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3839128Z       rouge (>= 3.0, < 5.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3839439Z       safe_yaml (~> 1.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3839774Z       terminal-table (>= 1.8, < 4.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3840121Z       webrick (~> 1.7)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3840451Z     jekyll-paginate-v2 (3.0.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3840792Z       jekyll (>= 3.0, < 5.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3841157Z     jekyll-sass-converter (3.1.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3841530Z       sass-embedded (~> 1.75)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3841882Z     jekyll-seo-tag (2.8.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3842297Z       jekyll (>= 3.8, < 5.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3842639Z     jekyll-watch (2.2.1)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3842954Z       listen (~> 3.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3843268Z     json (2.18.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3843558Z     kramdown (2.5.1)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3843861Z       rexml (>= 3.3.9)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3844180Z     kramdown-parser-gfm (1.1.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3844528Z       kramdown (~> 2.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3845006Z     liquid (4.0.4)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3845307Z     listen (3.9.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3845585Z       rb-fsevent (~> 0.10, >= 0.10.3)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3845951Z       rb-inotify (~> 0.9, >= 0.9.10)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3846282Z     mercenary (0.4.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3846590Z     pathutil (0.16.2)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3846881Z       forwardable-extended (~> 2.6)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3847112Z     public_suffix (6.0.2)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3847296Z     rake (13.3.1)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3847570Z     rb-fsevent (0.11.2)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3847777Z     rb-inotify (0.11.1)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3847966Z       ffi (~> 1.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3848142Z     rexml (3.4.4)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3848309Z     rouge (4.7.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3848481Z     safe_yaml (1.0.5)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3848666Z     sass-embedded (1.97.2)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3848866Z       google-protobuf (~> 4.31)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3849072Z       rake (>= 13)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3849242Z     terminal-table (3.0.2)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3849521Z       unicode-display_width (>= 1.1.1, < 3)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3849886Z     unicode-display_width (2.6.0)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3850205Z     webrick (1.9.2)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3850373Z 
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3850495Z PLATFORMS
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3850757Z   x86_64-linux
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3850928Z 
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3851045Z DEPENDENCIES
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3851288Z   jekyll (~> 4.3)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3851635Z   jekyll-paginate-v2
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3851924Z   jekyll-seo-tag
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3852109Z 
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3852235Z BUNDLED WITH
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3852515Z    2.3.27
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3853736Z ##[endgroup]
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.3865074Z Cache key: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.1.7-wd-/home/runner/work/stoptheslop.github.io/stoptheslop.github.io-with--without--only--Gemfile.lock-ff724a1b5a8826159f1355daaa0ca3753a570466eb788bd6f171fee963d622c8
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:49.5982019Z Cache hit for: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.1.7-wd-/home/runner/work/stoptheslop.github.io/stoptheslop.github.io-with--without--only--Gemfile.lock-ff724a1b5a8826159f1355daaa0ca3753a570466eb788bd6f171fee963d622c8
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:50.8059244Z Received 17999220 of 17999220 (100.0%), 18.0 MBs/sec
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:50.8060342Z Cache Size: ~17 MB (17999220 B)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:50.8108750Z [command]/usr/bin/tar -xf /home/runner/work/_temp/aee111a6-50e2-4c0b-abbd-8648ff096b56/cache.tzst -P -C /home/runner/work/stoptheslop.github.io/stoptheslop.github.io --use-compress-program unzstd
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:50.9164475Z Cache restored successfully
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:50.9188815Z Found cache for key: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.1.7-wd-/home/runner/work/stoptheslop.github.io/stoptheslop.github.io-with--without--only--Gemfile.lock-aeae2f4be49878db46ccdf2055b9c12c23f318fe44ca6a05172c5769529bb0c0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:50.9199416Z [command]/opt/hostedtoolcache/Ruby/3.1.7/x64/bin/bundle install --jobs 4
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.0936569Z Fetching gem metadata from https://rubygems.org/..........
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1028532Z Using rake 13.3.1
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1035407Z Using public_suffix 6.0.2
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1037528Z Using base64 0.3.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1037945Z Using bigdecimal 4.0.1
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1039787Z Using bundler 2.3.27
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1040511Z Using colorator 1.1.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1041407Z Using concurrent-ruby 1.3.6
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1042076Z Using csv 3.3.5
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1045561Z Using eventmachine 1.2.7
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1046250Z Using http_parser.rb 0.8.1
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1046689Z Using ffi 1.17.3 (x86_64-linux-gnu)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1051951Z Using rexml 3.4.4
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1061421Z Using forwardable-extended 2.6.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1061824Z Using rb-fsevent 0.11.2
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1062172Z Using json 2.18.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1064372Z Using liquid 4.0.4
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1068098Z Using mercenary 0.4.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1068610Z Using safe_yaml 1.0.5
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1069246Z Using unicode-display_width 2.6.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1069759Z Using webrick 1.9.2
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1071107Z Using addressable 2.8.8
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1076255Z Using rouge 4.7.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1078721Z Using em-websocket 0.5.3
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1080909Z Using google-protobuf 4.33.2 (x86_64-linux-gnu)
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1082859Z Using i18n 1.14.8
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1086125Z Using rb-inotify 0.11.1
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1087246Z Using pathutil 0.16.2
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1089717Z Using terminal-table 3.0.2
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1092944Z Using kramdown 2.5.1
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1094003Z Using sass-embedded 1.97.2
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1098630Z Using jekyll-sass-converter 3.1.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1099458Z Using listen 3.9.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1100684Z Using kramdown-parser-gfm 1.1.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1103750Z Using jekyll-watch 2.2.1
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1106189Z Using jekyll 4.4.1
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1109572Z Using jekyll-paginate-v2 3.0.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1111571Z Fetching jekyll-seo-tag 2.8.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.1917087Z Installing jekyll-seo-tag 2.8.0
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.2006998Z Bundle complete! 3 Gemfile dependencies, 37 gems now installed.
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.2007683Z Bundled gems are installed into `./vendor/bundle`
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.2314157Z [command]/opt/hostedtoolcache/Ruby/3.1.7/x64/bin/bundle clean
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.4070618Z Saving cache
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:52.4179466Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/stoptheslop.github.io/stoptheslop.github.io --files-from manifest.txt --use-compress-program zstdmt
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:53.8425296Z Sent 18048254 of 18048254 (100.0%), 17.4 MBs/sec
+build_and_deploy	Setup Ruby and Jekyll	2026-01-06T15:49:54.0755314Z Took   6.98 seconds
+build_and_deploy	Build the site	﻿2026-01-06T15:49:54.0846023Z ##[group]Run bundle exec jekyll build
+build_and_deploy	Build the site	2026-01-06T15:49:54.0846404Z [36;1mbundle exec jekyll build[0m
+build_and_deploy	Build the site	2026-01-06T15:49:54.0869817Z shell: /usr/bin/bash -e {0}
+build_and_deploy	Build the site	2026-01-06T15:49:54.0870080Z ##[endgroup]
+build_and_deploy	Build the site	2026-01-06T15:49:54.4437673Z Configuration file: /home/runner/work/stoptheslop.github.io/stoptheslop.github.io/_config.yml
+build_and_deploy	Build the site	2026-01-06T15:49:54.4590497Z             Source: /home/runner/work/stoptheslop.github.io/stoptheslop.github.io
+build_and_deploy	Build the site	2026-01-06T15:49:54.4591439Z        Destination: /home/runner/work/stoptheslop.github.io/stoptheslop.github.io/_site
+build_and_deploy	Build the site	2026-01-06T15:49:54.4591983Z  Incremental build: disabled. Enable with --incremental
+build_and_deploy	Build the site	2026-01-06T15:49:54.4592320Z       Generating... 
+build_and_deploy	Build the site	2026-01-06T15:49:54.4663019Z          AutoPages: Disabled/Not configured in site.config.
+build_and_deploy	Build the site	2026-01-06T15:49:54.4675750Z         Pagination: Complete, processed 1 pagination page(s)
+build_and_deploy	Build the site	2026-01-06T15:49:54.5136480Z                     done in 0.055 seconds.
+build_and_deploy	Build the site	2026-01-06T15:49:54.5136978Z  Auto-regeneration: disabled. Use --watch to enable.
+build_and_deploy	Deploy to GitHub Pages	﻿2026-01-06T15:49:54.5247802Z ##[group]Run peaceiris/actions-gh-pages@v3
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5248072Z with:
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5248505Z   github_token: ***
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5248688Z   publish_dir: ./_site
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5248898Z   publish_branch: gh-pages
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5249121Z   allow_empty_commit: false
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5249331Z   keep_files: false
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5249627Z   force_orphan: false
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5249820Z   enable_jekyll: false
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5250008Z   disable_nojekyll: false
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5250218Z   exclude_assets: .github
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5250417Z ##[endgroup]
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5815865Z [INFO] Usage https://github.com/peaceiris/actions-gh-pages#readme
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5820727Z ##[group]Dump inputs
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5821133Z [INFO] GithubToken: true
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5821496Z [INFO] PublishBranch: gh-pages
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5821901Z [INFO] PublishDir: ./_site
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5822265Z [INFO] DestinationDir: 
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5822603Z [INFO] ExternalRepository: 
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5823113Z [INFO] AllowEmptyCommit: false
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5823477Z [INFO] KeepFiles: false
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5823827Z [INFO] ForceOrphan: false
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5824146Z [INFO] UserName: 
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5824445Z [INFO] UserEmail: 
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5824879Z [INFO] CommitMessage: 
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5825223Z [INFO] FullCommitMessage: 
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5825559Z [INFO] TagName: 
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5825866Z [INFO] TagMessage: 
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5826199Z [INFO] EnableJekyll (DisableNoJekyll): false
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5826621Z [INFO] CNAME: 
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5826938Z [INFO] ExcludeAssets .github
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5827171Z 
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5827581Z ##[endgroup]
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5828119Z ##[group]Setup auth token
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5828481Z [INFO] setup GITHUB_TOKEN
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5829659Z ##[endgroup]
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5830221Z ##[group]Prepare publishing assets
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5831074Z [INFO] ForceOrphan: false
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5874029Z [command]/usr/bin/git clone --depth=1 --single-branch --branch gh-pages ***github.com/stoptheslop/stoptheslop.github.io.git /home/runner/actions_github_pages_1767714594582
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:54.5905754Z Cloning into '/home/runner/actions_github_pages_1767714594582'...
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0795769Z [INFO] clean up /home/runner/actions_github_pages_1767714594582
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0796429Z [INFO] chdir /home/runner/actions_github_pages_1767714594582
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0806048Z [command]/usr/bin/git rm -r --ignore-unmatch *
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0844486Z rm '.nojekyll'
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0844966Z rm 'README.md'
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0845219Z rm 'assets/css/style.css'
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0845454Z rm 'assets/images/logo.png'
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0845661Z rm 'index.html'
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0847808Z [INFO] chdir /home/runner/actions_github_pages_1767714594582
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0848512Z [INFO] prepare publishing assets
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0850451Z [INFO] copy /home/runner/work/stoptheslop.github.io/stoptheslop.github.io/_site to /home/runner/actions_github_pages_1767714594582
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0965274Z cp: no such file or directory: /home/runner/work/stoptheslop.github.io/stoptheslop.github.io/_site/.*
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0967504Z [INFO] delete excluded assets
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0993320Z rm: no paths given
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0995469Z [INFO] Created /home/runner/actions_github_pages_1767714594582/.nojekyll
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0996476Z ##[endgroup]
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.0997024Z ##[group]Setup Git config
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1009468Z [command]/usr/bin/git remote rm origin
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1055488Z [command]/usr/bin/git remote add origin ***github.com/stoptheslop/stoptheslop.github.io.git
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1089871Z [command]/usr/bin/git add --all
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1138029Z [command]/usr/bin/git config user.name JonasLundin
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1171940Z [command]/usr/bin/git config user.email JonasLundin@users.noreply.github.com
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1192806Z ##[endgroup]
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1193255Z ##[group]Create a commit
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1202395Z [command]/usr/bin/git commit -m deploy: 956d24cd912ab6b02fb838f9d8ce88521ce23540
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1251809Z [gh-pages c8827f8] deploy: 956d24cd912ab6b02fb838f9d8ce88521ce23540
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1252292Z  2 files changed, 126 insertions(+), 5 deletions(-)
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1252609Z  create mode 100644 plan/production_plan.md
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1254776Z ##[endgroup]
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1255224Z ##[group]Push the commit or tag
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:55.1264157Z [command]/usr/bin/git push origin gh-pages
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:56.2337650Z To https://github.com/stoptheslop/stoptheslop.github.io.git
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:56.2338404Z    036bdc8..c8827f8  gh-pages -> gh-pages
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:56.2381188Z ##[endgroup]
+build_and_deploy	Deploy to GitHub Pages	2026-01-06T15:49:56.2381424Z [INFO] Action successfully completed
+build_and_deploy	Post Checkout	﻿2026-01-06T15:49:56.2468949Z Post job cleanup.
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3335384Z [command]/usr/bin/git version
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3367726Z git version 2.52.0
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3404861Z Temporarily overriding HOME='/home/runner/work/_temp/e03406e4-714b-49a7-aaad-3b57896f3d39' before making global git config changes
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3405570Z Adding repository directory to the temporary git global config as a safe directory
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3409739Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/stoptheslop.github.io/stoptheslop.github.io
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3440691Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3467176Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3641159Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3657586Z http.https://github.com/.extraheader
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3667352Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3689808Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3852153Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build_and_deploy	Post Checkout	2026-01-06T15:49:56.3876453Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build_and_deploy	Complete job	﻿2026-01-06T15:49:56.4126746Z Cleaning up orphan processes
