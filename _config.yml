@@ -12,7 +12,7 @@ plugins:
 
 collections:
   signatures:
-    output: false
+    output: true
 
 pagination:
   enabled: true
