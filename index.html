@@ -26,14 +26,12 @@ pagination:
 
     <main>
       <section class="backdrop">
-        <h2>{{ site.data.content.backdrop.title | default: "The Backdrop" }}</h2>
-        <div class="content">
-          {{ site.data.content.backdrop.body | default: "Content coming soon..." | markdownify }}
-        </div>
+        <h2>{{ site.data.content.backdrop.title }}</h2>
+        <div class="content">{{ site.data.content.backdrop.body | markdownify }}</div>
       </section>
 
       <article class="manifesto">
-        <h2>{{ site.data.content.manifesto.title | default: "The Manifesto" }}</h2>
+        <h2>{{ site.data.content.manifesto.title }}</h2>
         {% for item in site.data.content.manifesto.items %}
         <p>{{ item }}</p>
         {% endfor %}
@@ -42,26 +40,18 @@ pagination:
       <section class="call-to-action">
         <h3>Stand for Quality.</h3>
         <a
-          href="https://github.com/stoptheslop/stop-the-slop.github.io/issues/new?template=sign_manifesto.yml"
+          href="https://github.com/{{ site.github.repository_nwo }}/issues/new?template=sign_manifesto.yml"
           class="sign-button"
           target="_blank"
           >Sign the Manifesto</a
         >
       </section>
 
+      {% if paginator.total_items > 0 %}
       <section class="signatures">
-        {% assign items_count = paginator.total_items | default: site.signatures.size | default: 0 %}
-        <h2>Signatories ({{ items_count }})</h2>
-
-        <!-- Debug Info -->
-        <!-- Paginator exists: {{ paginator | yesno: "YES", "NO" }} -->
-        <!-- Paginator Total items: {{ paginator.total_items }} -->
-        <!-- Paginator Documents size: {{ paginator.documents.size }} -->
-        <!-- Collection size: {{ site.signatures.size }} -->
-
+        <h2>Signatories ({{ paginator.total_items }})</h2>
         <div class="signature-list">
-          {% assign docs = paginator.documents | default: paginator.posts %} {% if docs.size > 0 %} {% for signature in
-          docs %}
+          {% for signature in paginator.documents %}
           <div class="signature">
             <p class="name">{{ signature.name }}</p>
             <p class="affiliation">{{ signature.affiliation }}</p>
@@ -72,20 +62,7 @@ pagination:
               >@{{ signature.github_username | replace: "@", "" }}</a
             >
           </div>
-          {% endfor %} {% else %}
-          <!-- Fallback: showing first 10 legacy style or if paginator failed -->
-          {% for signature in site.signatures limit:10 %}
-          <div class="signature">
-            <p class="name">{{ signature.name }}</p>
-            <p class="affiliation">{{ signature.affiliation }}</p>
-            <a
-              href="https://github.com/{{ signature.github_username | replace: '@', '' }}"
-              target="_blank"
-              rel="noopener"
-              >@{{ signature.github_username | replace: "@", "" }}</a
-            >
-          </div>
-          {% endfor %} {% endif %}
+          {% endfor %}
         </div>
 
         <div class="pagination" style="text-align: center; margin-top: 30px">
@@ -98,6 +75,7 @@ pagination:
           {% endif %} {% endif %}
         </div>
       </section>
+      {% endif %}
     </main>
 
     <footer>
