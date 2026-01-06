@@ -123,3 +123,8 @@
   affiliation: "Creator of Bitcoin"
   github_username: "satoshi"
   date: "2025-10-05"
+
+- name: "Jonas Cronholm-Lundin"
+  affiliation: "Head of Platform @ Getswish AB"
+  github_username: "JonasLundin"
+  date: "2026-01-06"
