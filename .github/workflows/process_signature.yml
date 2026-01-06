@@ -1,7 +1,7 @@
 name: Process Signature
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled]
 
 jobs:
   process-signature:
@@ -20,16 +20,27 @@ jobs:
         with:
           script: |
             const body = context.payload.issue.body;
-            const lines = body.split('\n');
+            const lines = body.split(/\r?\n/);
             let name = '';
             let affiliation = '';
             let github_username = '';
 
             for (let i = 0; i < lines.length; i++) {
-              if (lines[i].includes('### Display Name')) name = lines[i+2].trim();
-              if (lines[i].includes('### Affiliation')) affiliation = lines[i+2].trim();
-              if (lines[i].includes('### GitHub Username')) github_username = lines[i+2].trim();
+              const line = lines[i].trim();
+              if (line.includes('### Display Name')) {
+                name = lines[i+1]?.trim() || lines[i+2]?.trim() || '';
+              }
+              if (line.includes('### Affiliation')) {
+                affiliation = lines[i+1]?.trim() || lines[i+2]?.trim() || '';
+              }
+              if (line.includes('### GitHub Username')) {
+                github_username = lines[i+1]?.trim() || lines[i+2]?.trim() || '';
+              }
             }
+
+            // Remove common placeholder or empty strings
+            if (affiliation === '_No response_') affiliation = '';
+            if (github_username === '_No response_') github_username = '';
 
             if (!name) core.setFailed('Name is required');
 
