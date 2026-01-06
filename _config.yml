@@ -1,7 +1,14 @@
-# _config.yml
+title: Stop The Slop
+description: A manifesto for genuine design and engineering. Championing craftsmanship over "slop".
+url: "https://stoptheslop.github.io"
+author:
+  name: Stop The Slop Community
+twitter:
+  username: stoptheslop
 
 plugins:
   - jekyll-paginate-v2
+  - jekyll-seo-tag
 
 pagination:
   enabled: true

@@ -1,0 +1,30 @@
+name: Sign the Manifesto
+description: Add your signature to the Stop the Slop manifesto.
+title: "[Signature]: "
+labels: ["sign-manifesto"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for standing for quality! Please fill out the details below.
+  - type: input
+    id: name
+    attributes:
+      label: Display Name
+      placeholder: e.g. Ada Lovelace
+    validations:
+      required: true
+  - type: input
+    id: affiliation
+    attributes:
+      label: Affiliation
+      placeholder: e.g. Software Engineer at NASA
+    validations:
+      required: false
+  - type: input
+    id: github_username
+    attributes:
+      label: GitHub Username
+      placeholder: e.g. ada-lovelace
+    validations:
+      required: false

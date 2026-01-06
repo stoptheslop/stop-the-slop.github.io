@@ -1,0 +1,15 @@
+# _data/content.yml
+
+backdrop:
+  title: "The Backdrop"
+  body: |
+    In an era of rapid digital production, we've seen a surge in what we call "slop"—low-quality, derivative, and disposable content and software that prioritizes quantity over craftsmanship. 
+
+    This manifesto was born out of a desire to champion the human element in creation and engineering. We believe that while technology like AI is a powerful enhancer, it should never be a replacement for thoughtful design, robust architecture, and genuine human ingenuity.
+
+manifesto:
+  title: "The Manifesto"
+  items:
+    - "We believe in craftsmanship over quantity."
+    - "We believe in building durable, thoughtful solutions, not disposable digital landfill."
+    - "AI is a powerful tool, but it should augment human ingenuity, not replace it with low-value, derivative 'slop'."
